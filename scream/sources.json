@@ -1,0 +1,19 @@
+[
+    {"source": "app\/assistants\/stage-assistant.js"},
+    {
+        "scenes": "show-list",
+        "source": "app\/assistants\/showList-assistant.js"
+    },
+    {
+        "scenes": "scroll-msg",
+        "source": "app\/assistants\/scrollMsg-assistant.js"
+    }, 
+    {
+        "scenes": "show-msg",
+        "source": "app\/assistants\/showMsg-assistant.js"
+    },
+    {
+        "scenes": "update-text",
+        "source": "app\/assistants\/updateText-assistant.js"
+    }
+]

@@ -1,0 +1,104 @@
+/*.palm-list {
+	-webkit-border-image: url(../images/palm-group.png) 40 18 14 18; 
+}  */ 
+
+.listTitle { 
+  padding-top: 12px; 
+  padding-bottom: 12px; 
+  padding-right: 5px; 
+  padding-left: 15px; 
+  font-size: 14pt; 
+  text-align: left; 
+  font-weight: normal; 
+} 
+.unReadStyle { 
+  font-weight: bold; 
+} 
+.display-message {
+  background: #000; 
+  color: #fff; 
+  overflow: hidden; 
+  top: 10pt; 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  height:600pt;
+  text-transform:uppercase;
+  font-size: 74pt; 
+}                                               
+
+.led {position:absolute;top:0px;left:0px;}
+.led .off {z-index:1;opacity:0.4;}
+.led .on {z-index:2;position:absolute;top:85px;left:20px;opacity:1;}
+#ledSet {
+  -webkit-transform: rotate(90deg); 
+  position:relative; 
+  padding-bottom:140pt;      
+  padding-left:300pt;      
+} 
+                                                     
+.setPosition {
+  position:absolute;left:0px;
+}   
+
+.speed {          
+  width: 114pt;  
+}    
+
+.color {        
+  width: 114pt;   
+  margin-top: -42pt;   
+  margin-left:121pt;
+}                                   
+
+#buttons {
+  margin-top: -9pt;
+}  
+
+.deleteMessage {
+  width: 114pt;   
+  margin-top: 3pt;
+}
+
+.show{        
+  background: white;     
+  padding: 55px 22px 0px 22px;    
+  height: 20%;
+}        
+
+.values {      
+  padding-bottom: 142px;   
+  padding-left: 125px; 
+  width:50%;                
+  margin-top:-103px;    
+  color: #0033FF;     
+}      
+
+.fields{  
+  margin-right:2px;
+  padding-left:6px;   
+  width:50%;
+}
+                                                                                	
+.msg-header {
+  background: #9999FF; 
+  margin: 0px 0px 2px 0px;
+  height: 30pt;  
+  text-align: center;   
+  color: white;
+}           
+
+.msg{
+  padding-top:5px;
+}    
+
+.button{
+  margin-top: -7pt;    
+  margin-left: 67pt;     
+  width: 12px;
+  height:2px;   
+}  
+
+#button {
+  margin-top: -49pt;  
+}    
+#changeTitleButton{
+}
