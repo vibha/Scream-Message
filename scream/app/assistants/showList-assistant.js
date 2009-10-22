@@ -47,7 +47,8 @@ AddDialogAssistant.prototype.setup = function(widget) {
 };
 
 // Method to add the new message to db
-AddDialogAssistant.prototype.saveMessage = function() { 
+AddDialogAssistant.prototype.saveMessage = function() {  
+	$('test').update("working");
 	var title = this.titleModel.value;  
 	this.messages.push({title: title});
 	this.sceneAssistant.titleModel.items = this.messages; 
@@ -103,24 +104,24 @@ ShowListAssistant.prototype.setup = function() {
 }   
 
 ShowListAssistant.prototype.showMessage = function(event) {    
-     Mojo.Controller.stageController.pushScene("showMsg", this.messages, event.index);     
+     Mojo.Controller.stageController.pushScene("showMsg", this.messages, this.messages[event.index]);     
 } 
 
 //will open the any url in the web browser of phone  -- used for some other application 
-ShowListAssistant.prototype.handleListTap = function(event) {    
+//ShowListAssistant.prototype.handleListTap = function(event) {    
   //  this.controller.get("test").innerHTML = this.messages[event.index].title;
 	  //if(event.item.type == 'web'){
-	  	this.controller.serviceRequest("palm://com.palm.applicationManager", {
-		  method: "open",
-		  parameters:  {
-		      id: 'com.palm.app.browser',
-		      params: {
-		          target: 'http://' + this.messages[event.index].title
-		      }
-		  }
-		});
+	  //this.controller.serviceRequest("palm://com.palm.applicationManager", {
+		  //method: "open",
+		  //parameters:  {
+		      //id: 'com.palm.app.browser',
+		      //params: {
+		          //target: 'http://' + this.messages[event.index].title
+		      //}
+		  //}
+		//});
 	//  }         
-}
+//}
 
 // Delete method for deleting all the messages at once in the database
 ShowListAssistant.prototype.deleteAllMessages = function(event) {

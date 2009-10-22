@@ -55,10 +55,10 @@ AddDialogAssistant.prototype.updateMessage = function() {
 
 }
 		
-function ShowMsgAssistant(msgArray, index) {  
+function ShowMsgAssistant(msgArray, message) {  
 
     this.messages = msgArray;
-	this.message = msgArray[index];
+	this.message = message;
 	this.msgTitle =  this.message.title;
 	this.msgColor =  this.message.color;
 	this.msgSpeed =  this.message.speed;
@@ -215,7 +215,7 @@ ShowMsgAssistant.prototype.setup = function() {
 
 ShowMsgAssistant.prototype.saveMsg = function(event) {	 
 	
-  Mojo.Controller.stageController.pushScene("scrollMsg", this.msgTitle, this.msgColor, this.msgSpeed, this.msgAlignment);
+  Mojo.Controller.stageController.pushScene("scrollMsg", this.message);
 	
 }
 

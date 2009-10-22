@@ -1,9 +1,10 @@
 Scream = {};
 Scream.depot = makeMessageDepot();
-Scream.defaultTitle = "Hello World";
-Scream.defaultColor = "rainbow";
-Scream.defaultSpeed = "medium";
-Scream.defaultAlignment = "horizontal";
+//Scream.defaultMsg = Scream.messages[0];
+// Scream.defaultTitle = "Hello World";
+// Scream.defaultColor = "rainbow";
+// Scream.defaultSpeed = "medium";
+// Scream.defaultAlignment = "horizontal";
 //Scream.messages = Scream.depot.get('messageList', this.dbGetSuccess.bind(this), this.dbFailure); 
 
 function StageAssistant() {	
@@ -21,16 +22,16 @@ StageAssistant.prototype.dbGetSuccess = function(fl) {
 	
 		var recordSize = Object.values(fl).size();
 		if(recordSize == 0) {
-			var messages = [{title: "Hello World", color: "rainbow", speed: "medium", alignment: "horizontal"}]
+			var messages = [{title: "Hello World", color: "rainbow", speed: "medium", alignment: "horizontal"}];  
+			this.depot.add("messageList", messages);
 			Mojo.Log.error("No messages in database");
 			} 
 		else {
 			messages = fl;
 			}     
-			Scream.messages = messages; 
-		 this.controller.pushScene("scrollMsg", Scream.defaultTitle, Scream.defaultColor, Scream.defaultSpeed, Scream.defaultAlignment);
+		 this.controller.pushScene("scrollMsg", messages[0]);  
+		Scream.messages = messages; 
 		// this.controller.pushScene("showList", messages);
-		
 }
 
 StageAssistant.prototype.dbFailure = function(transaction, result) {
